@@ -1,0 +1,769 @@
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --orange-color: #FF9900;
+  --white-color: #FFF;
+  --dark_orange-color: #E1670E;
+  --gap: 30px;
+  --gap-foteer: 240px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat-Regular"),
+    url(../fonts/Montserrat-Regular.woff2) format(woff2),
+    url(../fonts/Montserrat-Regular.woff) format(woff);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat-Semibold"),
+    url(../fonts/Montserrat-SemiBold.woff2) format(woff2),
+    url(../fonts/Montserrat-SemiBold.woff) format(woff);
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat-Bold"),
+    url(../fonts/Montserrat-Black.woff2) format(woff2),
+    url(../fonts/Montserrat-Black.woff) format(woff);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local("Montserrat-Extrabold"),
+    url(../fonts/Montserrat-ExtraBold.woff2) format(woff2),
+    url(../fonts/Montserrat-ExtraBold.woff) format(woff);
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Montserrat';
+  background-color: #FFFFFF;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 1770px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 21px;
+}
+
+/* header */
+
+.header {
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 32px 32px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 12px 75px;
+  margin-bottom: 50px;
+}
+
+.container__header {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  padding-right: 85px;
+  text-align: center;
+  gap: 85px;
+}
+
+
+.nav__item {
+  border: transparent;
+}
+
+.nav__link {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21.94px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav__link:focus-visible {
+  outline-offset: 3px;
+  outline: 1px solid var(--orange-color);
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+}
+
+.nav__link:active {
+  color: var(--dark_orange-color);
+  outline: none;
+}
+
+.nav__link:active::after {
+  background-color: #E1670E;
+
+
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FF9900;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav__link--search {
+  background-color: transparent;
+  border: transparent;
+  padding: 0;
+}
+
+.nav__link--search:focus-visible {
+  outline: 1px solid red;
+  outline-offset: 2px;
+
+
+}
+
+
+.nav__link--search:hover svg path {
+  stroke: #E1670E;
+  transition: fill .3s ease-in-out, stroke .3s ease-in-out;
+
+}
+
+.nav__link--search:hover rect {
+  fill: #E1670E;
+  transition: fill .3s ease-in-out, stroke .3s ease-in-out;
+}
+
+
+.list__reset {
+  margin: 0;
+  list-style: none;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__logo img {
+  max-width: 100%;
+}
+
+.main {
+  padding: 0 67px;
+}
+
+/* Hero */
+
+.hero {
+  max-width: 1770px;
+  margin: 0 auto;
+  background-image: url(../img/low-angle-photo-of-balconies-2462015\ 1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  margin-bottom: 51px;
+}
+
+.hero__heading {
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+  font-size: 71px;
+  line-height: 84px;
+  margin-bottom: 27px;
+}
+
+.hero__text {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 26px;
+  margin-bottom: 90px;
+}
+
+.hero__container {
+  padding: 104px 770px 100px 80px;
+}
+
+.btn {
+  border: 1px solid #FF9900;
+  border-radius: 13px;
+  background-color: #FF9900;
+  padding: 25px 41px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:focus {
+  background-color: #e8b66b;
+}
+
+.btn:hover {
+  background-color: #FFB84D;
+}
+
+
+
+.btn:active {
+  background-color: #E1670E;
+}
+
+.hero__btn {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 28px;
+  color: #FFF;
+  text-align: center;
+}
+
+/* О нас */
+
+.about__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16.2px;
+  line-height: 31.5px;
+  max-width: 1268px;
+  /* max-width: 621px; */
+  margin-bottom: 47px;
+}
+
+
+
+.about__block {
+  height: auto;
+  gap: 30px;
+  margin-bottom: 101px;
+}
+
+.about__left {
+  background-image: url(../img/середина.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 31px;
+  background-size: cover;
+  width: 870px;
+  align-items: flex-end;
+  align-content: center;
+}
+
+.card__1 {
+  align-items: flex-start;
+  padding: 63px 117px 63px 59px;
+  border: 1px solid #CACACA;
+  border-radius: 32px;
+  margin-bottom: 30px;
+  min-height: 295px;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.card__1--picture {
+  background-image: url(../img/Frame16.svg);
+  background-repeat: no-repeat;
+  background-position: 60px 66px;
+  display: flex;
+}
+
+.article {
+  padding-left: 242px;
+}
+
+
+.card__2--picture {
+  background-image: url(../img/Frame12.svg);
+  background-repeat: no-repeat;
+  background-position: 60px 66px;
+  display: flex;
+}
+
+
+.cards {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.card__1 img,
+.card__2 img {
+  width: 190px;
+}
+
+.right__heading,
+.right__text {
+  margin: 0;
+}
+
+.right__heading {
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 39px;
+  margin-bottom: 2px;
+}
+
+.right__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  max-width: 450px;
+}
+
+
+
+.card__2 {
+  padding: 62px 114px 67px 58px;
+  border: 1px solid #CACACA;
+  border-radius: 32px;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left__text {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  color: #fff;
+  margin-right: 30px;
+  max-width: 460px;
+}
+
+.about__opacity {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 50px;
+  align-items: center;
+  border-radius: 32px;
+  justify-content: space-between;
+}
+
+.about__btn {
+  background-color: transparent;
+  padding: 20px 40px 16px 37px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: #fff;
+  border: 3px solid #FF9900;
+}
+
+/* этапы */
+.heading__left {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.how__descr {
+  margin: 0;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.how__left {
+  max-width: 708px;
+
+}
+
+.how__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  min-width: 437px;
+  margin-bottom: 23px;
+}
+
+.how__container {
+
+  display: flex;
+  gap: 191px;
+  margin-bottom: 99px;
+
+}
+
+.how__right_img img {
+  width: 100%;
+  height: 100%;
+  min-width: 437px;
+  border-radius: 32px;
+  object-fit: cover;
+}
+
+
+
+.how__btn1 {
+  margin-right: 27px;
+  padding: 19px 39px 18px 40px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.how__btn2 {
+  padding: 24px 39px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  background-color: #fff;
+  padding: 17px 38px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.how__btn2:hover {
+  color: #FFF;
+  background-color: #666666;
+}
+
+.how__btn2:focus {
+  color: #FFF;
+  background-color: #666666;
+}
+
+.how__btn2:active {
+  color: #FFF;
+  background-color: #000000;
+}
+
+.heading__faq {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.faq__card {
+  --offsets: 2;
+  gap: var(--gap);
+}
+
+.faq__list {
+  padding: 0;
+  margin-bottom: 96px;
+  width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) +1));
+}
+
+.faq__item {
+  border: 1px solid #CACACA;
+  border-radius: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 65px 60px;
+}
+
+.faq__heading--question {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 8px;
+}
+
+.faq__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px
+}
+
+/* footer */
+
+.footer__block {
+  padding: 0px 74px;
+  width: 100%;
+  background-color: black;
+}
+
+
+.footer__logo {
+  width: 224px;
+  height: 72px;
+  margin-bottom: 27px;
+}
+
+.footer__right {
+  color: #FFF;
+  padding-top: 89px;
+}
+
+.footer__left_block {
+  margin-right: auto;
+  flex-basis: 450px;
+}
+
+.footer__left {
+  margin: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 81px;
+}
+
+.footer__link {
+  color: #CACACA;
+  text-decoration: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__link:hover {
+  color: #FF9900;
+}
+
+.footer__item {
+  width: max-content;
+  padding-bottom: 14px;
+}
+
+.footer__link:focus-visible {
+
+  outline-offset: 3px;
+  outline: 1px solid var(--orange-color);
+
+}
+
+.footer__link:active {
+  color: #E1670E;
+  outline: none;
+}
+
+.footer__list {
+  padding: 0;
+
+}
+
+.footer__center {
+  width: 640px;
+  margin-right: auto;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.container__footer {
+  padding: 50px 0px 50px 0px;
+  width: calc((100% - (var(--gap-foteer) * var(--offsets))) / (var(--offsets) +1));
+}
+
+
+
+.footer__heading {
+
+  color: #fff;
+  margin: 0;
+
+  justify-content: center;
+  margin-bottom: 25px;
+
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+}
+
+.footer__form {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.btn__footer {
+  padding: 21px 51px 22px 49px;
+  font-size: 19px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.form-input {
+  background: #414141;
+  border-radius: 16px;
+  width: 570px;
+  height: 60px;
+  padding-left: 21px;
+
+}
+
+.form-name,
+.form-email,
+.form-comment {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #CACACA;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  border-style: none;
+}
+
+.form-name:hover,
+.form-email:hover,
+.form-comment:hover {
+  background-color: #666666;
+
+}
+
+.form-name:focus,
+.form-email:focus,
+.form-comment:focus {
+  background-color: #666666;
+  outline: none;
+}
+
+.form-name:active,
+.form-email:active,
+.form-comment:active {
+  color: #fff;
+
+}
+
+.form-textarea {
+  background: #414141;
+  border-radius: 16px;
+  width: 570px;
+  height: 150px;
+  margin-bottom: 27px;
+  padding-left: 25px;
+  padding-top: 14px;
+}
+
+
+
+.footer__text {
+  margin: 0;
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  max-width: 363px;
+}
+
+
+
+.form-check input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+.form-check input:focus+span::before {
+  outline-offset: 2px;
+  outline: 2px solid var(--orange-color);
+}
+
+
+
+.form-check span {
+  display: flex;
+  position: relative;
+  width: 346px;
+  list-style: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #CACACA;
+  align-items: center;
+  padding-left: 23px;
+}
+
+
+.btn__input {
+  display: flex;
+}
+
+
+.form-check span::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  left: -4px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #CACACA;
+
+}
+
+
+.form-check span::after {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 19px;
+  width: 14px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.94952 1.08233L3.99977 6.03208L1.17135 3.20365' stroke='%2397EE3F' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-check input:checked+span::after {
+  display: block;
+}
+
+
+
+.footer__social {
+  display: flex;
+  gap: 25px;
+
+}
+
+.footer__social svg path {
+  transition: fill .3s ease-in-out;
+}
+
+.footer__icon:hover svg path {
+  fill: #FF9900;
+}
+
+.footer__icon:active svg path {
+  fill: #E1670E;
+}
